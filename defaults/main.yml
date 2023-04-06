@@ -1,6 +1,6 @@
 ---
 # branch from github
-freqtrade_branch: "stable"
+freqtrade_branch: "feature/fetch-public-trades"
 
 # build directory for docker
 docker_build_directory: "/tmp/build/docker"

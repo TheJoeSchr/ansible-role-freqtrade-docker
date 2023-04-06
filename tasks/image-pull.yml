@@ -1,7 +1,7 @@
 ---
-- name: "Pull Docker image for freqtradeorg/freqtrade:{{ freqtrade_branch }} from Registry."
+- name: "Pull Docker image for joeschr/freqtrade-trades:latest from Registry."
   community.docker.docker_image:
-    name: freqtradeorg/freqtrade
-    tag: "{{ freqtrade_branch }}"
+    name: joeschr/freqtrade-trades
+    tag: "latest"
     source: pull
   when: not build_freqtrade|bool

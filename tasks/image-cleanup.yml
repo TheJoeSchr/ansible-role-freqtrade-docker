@@ -6,9 +6,9 @@
     state: absent
   when: build_freqtrade_custom|bool and freqtrade_custom_prefix is defined
 
-- name: "remove Docker image for freqtradeorg/freqtrade:{{ freqtrade_branch }}."
+- name: "remove Docker image for joeschr/freqtrade-trades:latest."
   community.docker.docker_image:
-    name: freqtradeorg/freqtrade
-    tag: "{{ freqtrade_branch }}"
+    name: joeschr/freqtrade-trades
+    tag: "latest"
     state: absent
   
