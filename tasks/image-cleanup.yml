@@ -6,6 +6,12 @@
     state: absent
   when: build_freqtrade_custom|bool and freqtrade_custom_prefix is defined
 
+- name: stop freqtrade container
+  docker_container:
+    name: freqtrade
+    image: joeschr/freqtrade-trades:latest
+    state: absent
+
 - name: "remove Docker image for joeschr/freqtrade-trades:latest."
   community.docker.docker_image:
     name: joeschr/freqtrade-trades
